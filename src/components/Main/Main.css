@@ -1,0 +1,14 @@
+main {
+    margin-top: 60px;
+    background-color: #F5F7FA;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.bookmarkCardGroup {
+    margin-left:15%;
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    height:100%;
+}

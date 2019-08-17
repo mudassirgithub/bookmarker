@@ -1,0 +1,77 @@
+#pageMask {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .addUrlModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+  }
+
+.addUrlInputGroup{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    margin: auto;
+    width: 80%;
+    height: 50px;
+    background-color: #505D69;
+    border-radius: 10px;
+    border: 4px solid #505D69;
+}
+
+.urlIcon {
+    width: 60px;
+    height: 50px;
+    background-color: #505D69;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.addUrlInput{
+    background: #FFFFFF;
+    width:100%;
+    padding: 10px;
+    border: 0px;
+    border-radius: 10px;
+}
+
+.addUrlInput:focus {
+    outline: none;
+    box-shadow: inset 0 0 10px #505d69;
+}
+
+.urlPreview {
+    width: 80%;
+    height: 200px;
+    margin: 15px 5px 5px 5px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    background-color: #FFFFFF;
+    border: 1px solid #505D69;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: inset 0 0 10px #505d69;
+}
+
+.modalButton {
+    width: 60px;
+    height: 50px;
+    background-color: #505D69;
+    color: white;
+    border:0px;  
+    font-weight: bold;
+    font-size: 1em; 
+}
