@@ -8,16 +8,22 @@ class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      isModalVisible: true
+      isModalVisible: false
     }
+  }
+
+  changeModalVisibility = (check) => {
+    this.setState({
+      isModalVisible: check
+    })
   }
 
   render () {
     return (
       <React.Fragment>
-        <Header />
+        <Header changeModalVisibility={this.changeModalVisibility} />
         <Main />
-        {this.state.isModalVisible && <AddModal />}
+        {this.state.isModalVisible && <AddModal changeModalVisibility={this.changeModalVisibility} />}
       </React.Fragment>
     )
   }

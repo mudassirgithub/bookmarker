@@ -71,7 +71,11 @@ img {
     height: 50px;
     background-color: #505D69;
     color: white;
-    border:0px;  
+    border:0px;
     font-weight: bold;
-    font-size: 1em; 
+    font-size: 1em;
+}
+
+.modalButton:hover {
+    box-shadow: 0 10px 20px #505d69;
 }

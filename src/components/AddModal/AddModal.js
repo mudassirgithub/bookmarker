@@ -16,6 +16,20 @@ class AddModal extends React.Component {
         })
     }
 
+    componentWillMount() {
+        document.addEventListener('mousedown', this.handleClick, false);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('mousedown', this.handleClick, false);
+    }
+
+    handleClick = (e) => {
+        if (!this.node.contains(e.target)) {
+            return (this.props.changeModalVisibility(false));
+        }
+    }
+
     render () {
         return (
             <div id="pageMask" >
@@ -27,8 +41,6 @@ class AddModal extends React.Component {
                         <input autoFocus onChange={this.onChange} required value={this.state.url} className="addUrlInput" type="text" name="url" placeholder="add url here..." />
                         <button type="submit" className="modalButton">SAVE</button>
                     </form>
-                    <div className="urlPreview">
-                    </div>    
                 </div>
             </div>
         );
