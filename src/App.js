@@ -9,7 +9,15 @@ class App extends React.Component {
     super(props)
     this.state = {
       isModalVisible: false,
-      bookmarks: ''
+      bookmarks: [
+        // {
+        //   url: "https://coderhive.net/",
+        //   icon: "https://coderhive.net/wp-content/uploads/2019/04/cropped-Logo-512px-square-with-bg-192x192.png",
+        //   title: "Coding Bootcamp - CoderHive",
+        //   description: "An immersive program that gives training, mentoring, environment and tools to launch your career as a Full Stack Developer in technology Startups."
+        // }
+      ]
+
     }
   }
 
@@ -19,12 +27,18 @@ class App extends React.Component {
     })
   }
 
+  addBookmark = (bookmark) => {
+    this.setState(state => ({
+      bookmarks: [...state.bookmarks, bookmark]
+    }))
+  }
+
   render () {
     return (
       <React.Fragment>
         <Header changeModalVisibility={this.changeModalVisibility} />
-        <Main boomarks={this.state.bookmarks}/>
-        {this.state.isModalVisible && <AddModal changeModalVisibility={this.changeModalVisibility} />}
+        <Main bookmarks={this.state.bookmarks}/>
+        {this.state.isModalVisible && <AddModal changeModalVisibility={this.changeModalVisibility} addBookmark={this.addBookmark} />}
       </React.Fragment>
     )
   }

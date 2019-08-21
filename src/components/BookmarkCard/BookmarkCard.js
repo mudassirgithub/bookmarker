@@ -1,20 +1,18 @@
 import React from 'react'
 import './BookmarkCard.css'
-import dribble from './dribble.png'
 
 class BookmarkCard extends React.Component {
     render () {
         return (
-            <a href="foo" target="_blank" className="BookmarkCard">
+            <a href={this.props.bookmark.url} target="_blank" rel="noopener noreferrer" className="BookmarkCard">
                 <div className="bookmarkImage">
-                    <img src={dribble} alt="dribble png" />
+                    <img src={this.props.bookmark.icon} alt="url" />
                 </div>
                 <div className="bookmarkTitle">
-                    Iam the title of the bookmark, Iam the title of the bookmark, Iam the title of the bookmark
-
+                    {this.props.bookmark.title}
                 </div>
                 <div className="bookmarkDes">
-                    I am the Description of the bookmark, I am the Description of the bookmark
+                    {this.props.bookmark.description.substring(0,100).concat('...')}
                 </div>
             </a>
         )

@@ -3,11 +3,12 @@ import './Main.css'
 import BookmarkCard from '../BookmarkCard/BookmarkCard';
 
 class Main extends React.Component {
-    render () {
+    render() {
+        const bookmark_cards = this.props.bookmarks.map((bookmark, i) => <BookmarkCard key={i} bookmark={bookmark}/>)
         return (
             <main>
                 <div className="bookmarkCardGroup">
-                    <BookmarkCard />
+                    {bookmark_cards}
                 </div>
             </main>
         )

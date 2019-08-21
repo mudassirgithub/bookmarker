@@ -35,12 +35,23 @@ class AddModal extends React.Component {
         }
         axios
           .post('http://localhost:9000/url', url)
-            .then(res => {this.setState({apiResponse: res.data.other, gotResponse: true})})
+            .then(res => {
+                this.setState({ apiResponse: res.data.other, gotResponse: true })
+                console.log(res.data.other)
+            })
             .catch(err => {this.setState({responseMsg: "oops: cant connect"})})
     }
 
     saveUrl = () => {
-
+        const new_bookmark = {
+            url: this.state.url,
+            icon: this.state.apiResponse.icon,
+            title: this.state.apiResponse.title,
+            description: this.state.apiResponse.description
+        }
+        console.log(new_bookmark)
+        this.props.addBookmark(new_bookmark)
+        this.props.changeModalVisibility(false)
     }
 
     componentDidMount() {
