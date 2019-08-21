@@ -8,14 +8,6 @@ class Main extends React.Component {
             <main>
                 <div className="bookmarkCardGroup">
                     <BookmarkCard />
-                    <BookmarkCard />
-                    <BookmarkCard />
-                    <BookmarkCard />
-                    <BookmarkCard />
-                    <BookmarkCard />
-                    <BookmarkCard />
-                    <BookmarkCard />
-                    <BookmarkCard />
                 </div>
             </main>
         )

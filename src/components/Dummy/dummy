@@ -1,359 +1,90 @@
-/* add url page */
-
-position: relative;
-width: 1920px;
-height: 1080px;
-
-background: #F5F7FA;
-
-
-/* copy of main page */
+/* Bookmark card */
 
 position: absolute;
-width: 1920px;
-height: 1080px;
-left: 0px;
-top: 0px;
+width: 250px;
+height: 250px;
 
 
 
-/* Header */
+/* Bookmark card background */
 
 position: absolute;
-width: 1920px;
-height: 130px;
-left: 0px;
-top: 0px;
-
-
-
-/* Header Container */
-
-position: absolute;
-width: 1920px;
-height: 130px;
-left: 0px;
-top: 0px;
+width: 250px;
+height: 250px;
 
 background: #FFFFFF;
-box-shadow: 0px 4px 4px #505D69;
+border: 3px solid #505D69;
+border-radius: 10px;
 
 
-/* plus button */
-
-position: absolute;
-width: 66px;
-height: 66px;
-left: 1780px;
-top: 32px;
-
-background: url(plus button (1) (1).png);
-
-
-/* logo */
+/* bookmark image card */
 
 position: absolute;
-width: 409px;
-height: 53px;
-left: 52px;
-top: 38px;
-
-background: url(logo.png);
+width: 250px;
+height: 135px;
 
 
-/* main */
+
+/* bookmark image container */
 
 position: absolute;
-width: 852px;
-height: 897px;
-left: 530px;
-top: 170px;
-
-
-
-/* Load More Button */
-
-position: absolute;
-width: 160px;
-height: 53px;
-left: 869px;
-top: 1014px;
-
-
-
-/* Rectangle */
-
-position: absolute;
-width: 160px;
-height: 50px;
-left: 869px;
-top: 1017px;
+width: 250px;
+height: 135px;
 
 background: #FFFFFF;
-border: 4px solid #505D64;
-box-sizing: border-box;
-border-radius: 32px;
+border-radius: 10px;
 
 
-/* more */
+/* Line */
 
 position: absolute;
-width: 160px;
-height: 50px;
-left: 869px;
-top: 1014px;
+width: 250px;
+height: 0px;
+
+border: 2px solid #505D69;
+transform: rotate(-0.24deg);
+
+
+/* bookmark image */
+
+position: absolute;
+width: 120px;
+height: 120px;
+
+background: url(dribble.png);
+
+
+/* bookmark title */
+
+position: absolute;
+width: 236px;
+height: 34px;
 
 font-family: Righteous;
 font-style: normal;
 font-weight: normal;
-font-size: 40px;
-line-height: 50px;
-/* identical to box height */
+font-size: 10px;
+line-height: 12px;
 display: flex;
 align-items: center;
-text-align: center;
 letter-spacing: 0.12em;
 
-color: #505D64;
+color: #242121;
 
 
 
-/* bookmark card group */
-
-position: absolute;
-width: 852px;
-height: 830px;
-left: 530px;
-top: 170px;
-
-
-
-/* Bookmark card */
+/* bookmark description */
 
 position: absolute;
-width: 250px;
-height: 250px;
-left: 530px;
-top: 170px;
-
-background: #FFFFFF;
-border: 3px solid #505D69;
-border-radius: 10px;
-
-
-/* Bookmark card */
-
-position: absolute;
-width: 250px;
-height: 250px;
-left: 830px;
-top: 170px;
-
-background: #FFFFFF;
-border: 3px solid #505D69;
-border-radius: 10px;
-
-
-/* Bookmark card */
-
-position: absolute;
-width: 250px;
-height: 250px;
-left: 1130px;
-top: 170px;
-
-background: #FFFFFF;
-border: 3px solid #505D69;
-border-radius: 10px;
-
-
-/* Bookmark card */
-
-position: absolute;
-width: 250px;
-height: 250px;
-left: 530px;
-top: 460px;
-
-background: #FFFFFF;
-border: 3px solid #505D69;
-border-radius: 10px;
-
-
-/* Bookmark card */
-
-position: absolute;
-width: 250px;
-height: 250px;
-left: 830px;
-top: 460px;
-
-background: #FFFFFF;
-border: 3px solid #505D69;
-border-radius: 10px;
-
-
-/* Bookmark card */
-
-position: absolute;
-width: 250px;
-height: 250px;
-left: 1130px;
-top: 460px;
-
-background: #FFFFFF;
-border: 3px solid #505D69;
-border-radius: 10px;
-
-
-/* Bookmark card */
-
-position: absolute;
-width: 250px;
-height: 250px;
-left: 532px;
-top: 750px;
-
-background: #FFFFFF;
-border: 3px solid #505D69;
-border-radius: 10px;
-
-
-/* Bookmark card */
-
-position: absolute;
-width: 250px;
-height: 250px;
-left: 832px;
-top: 750px;
-
-background: #FFFFFF;
-border: 3px solid #505D69;
-border-radius: 10px;
-
-
-/* Bookmark card */
-
-position: absolute;
-width: 250px;
-height: 250px;
-left: 1132px;
-top: 750px;
-
-background: #FFFFFF;
-border: 3px solid #505D69;
-border-radius: 10px;
-
-
-/* dim background */
-
-position: absolute;
-width: 1920px;
-height: 1080px;
-left: 0px;
-top: 0px;
-
-background: rgba(233, 234, 235, 0.7);
-
-
-/* Add url Modal */
-
-position: absolute;
-width: 1000px;
-height: 400px;
-left: 455px;
-top: 340px;
-
-
-
-/* Add url modal Container */
-
-position: absolute;
-width: 1000px;
-height: 400px;
-left: 455px;
-top: 340px;
-
-background: #FFFFFF;
-border: 6px solid #9AA5B1;
-box-sizing: border-box;
-border-radius: 10px;
-
-
-/* input url */
-
-position: absolute;
-width: 800px;
-height: 120px;
-left: 560px;
-top: 480px;
-
-background: #FFFFFF;
-border: 3px solid #9AA5B1;
-box-sizing: border-box;
-border-radius: 64px;
-
-
-/* add button  */
-
-position: absolute;
-width: 154px;
-height: 120px;
-left: 1204px;
-top: 480px;
-
-
-
-/* Union */
-
-position: absolute;
-width: 154px;
-height: 120px;
-left: 1204px;
-top: 480px;
-
-background: #52606D;
-
-
-/* add button container rounder */
-
-position: absolute;
-width: 154px;
-height: 120px;
-left: 1204px;
-top: 480px;
-
-background: #52606D;
-border-radius: 64px;
-
-
-/* add button container flat */
-
-position: absolute;
-width: 97px;
-height: 120px;
-left: 1204px;
-top: 480px;
-
-background: #52606D;
-
-
-/* ADD */
-
-position: absolute;
-width: 154px;
-height: 120px;
-left: 1204px;
-top: 480px;
-
-font-family: Righteous;
-font-style: normal;
-font-weight: normal;
-font-size: 40px;
-line-height: 50px;
+width: 236px;
+height: 66px;
+
+font-family: Rachana;
+font-size: 10px;
+line-height: 12px;
 display: flex;
 align-items: center;
-text-align: center;
+letter-spacing: 0.12em;
 
-color: #FFFFFF;
+color: #545353;
 

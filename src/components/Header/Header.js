@@ -4,6 +4,7 @@ import logo from './logo.png'
 import plus from './plus-button.png'
 
 class Header extends React.Component {
+    
     handleClick = () => {
         this.props.changeModalVisibility(true)
     }

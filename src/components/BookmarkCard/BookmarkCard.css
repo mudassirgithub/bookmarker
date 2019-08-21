@@ -4,9 +4,43 @@
     margin: 15px 5px 5px 5px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    background-color: #FFFFFF;
     border: 1px solid #505D69;
     border-radius: 10px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
+a {
+    text-decoration: none;
+}
 .BookmarkCard:hover {
     box-shadow: 1px 1px 2px 1px rgba(80,93,105,1);
+}
+
+.bookmarkImage {
+    max-width: 250px;
+    max-height: 100px;
+    padding: 5px;
+    border-bottom: 1px solid #505D69;
+}
+
+.bookmarkTitle {
+    max-width: 250px;
+    max-height: 35px;
+    padding: 3px 5px;
+    font-style: normal;
+    font-weight: Bold;
+    font-size: 12px;
+    line-height: 12px;
+    color: #242121;
+}
+
+.bookmarkDes {
+    max-width: 250px;
+    max-height: 35px;
+    /* font-family: sans-serif; */
+    font-style: normal;
+    font-weight: normal;
+    padding: 3px 5px;
+    font-size: 15px;
+    line-height: 12px;
+    color: #242121;
 }

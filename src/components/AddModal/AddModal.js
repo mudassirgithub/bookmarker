@@ -1,22 +1,49 @@
 import React from 'react'
 import './AddModal.css'
 import url from './url-white-x.png'
+import axios from 'axios'
+import Preview from '../Preview/Preview';
 
 class AddModal extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            url: ''
+            url: '',
+            apiResponse: '',
+            previewLoading: false,
+            gotResponse: false,
+            responseMsg: ''
         }
     }
 
     onChange = event => {
         this.setState({
-            [event.target.name]: event.target.value
+            url: event.target.value,
+            previewLoading: false,
+            gotResponse: false
         })
     }
 
-    componentWillMount() {
+    postUrl = (event) => {
+        event.preventDefault()
+        this.setState({
+            previewLoading: true,
+            responseMsg: 'Loading...'
+        })
+        var url = {
+            urlgot: this.state.url
+        }
+        axios
+          .post('http://localhost:9000/url', url)
+            .then(res => {this.setState({apiResponse: res.data.other, gotResponse: true})})
+            .catch(err => {this.setState({responseMsg: "oops: cant connect"})})
+    }
+
+    saveUrl = () => {
+
+    }
+
+    componentDidMount() {
         document.addEventListener('mousedown', this.handleClick, false);
     }
 
@@ -34,13 +61,19 @@ class AddModal extends React.Component {
         return (
             <div id="pageMask" >
                 <div className="addUrlModal" role="dialog" ref={node => this.node = node}>
-                    <form className="addUrlInputGroup">
+                    <form onSubmit={this.postUrl} className="addUrlInputGroup">
                         <div className="urlIcon">
                             <img src={url} alt="url icon" />
                         </div>
-                        <input autoFocus onChange={this.onChange} required value={this.state.url} className="addUrlInput" type="text" name="url" placeholder="add url here..." />
-                        <button type="submit" className="modalButton">SAVE</button>
+                        <input autoFocus onChange={this.onChange} required value={this.state.url} className="addUrlInput" type="text" name="url" placeholder="https://example.com/" />
+                        {this.state.gotResponse
+                            ?
+                            <button onClick={this.saveUrl} type="button" className="modalButton">Save</button>
+                            :
+                            <button onClick={this.postUrl} type="button" className="modalButton">Load</button>
+                        }
                     </form>
+                    {this.state.previewLoading && <Preview other={this.state.apiResponse} gotResponse={this.state.gotResponse} responseMsg={this.state.responseMsg}/>}
                 </div>
             </div>
         );

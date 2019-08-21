@@ -8,7 +8,8 @@ class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      isModalVisible: false
+      isModalVisible: false,
+      bookmarks: ''
     }
   }
 
@@ -22,7 +23,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Header changeModalVisibility={this.changeModalVisibility} />
-        <Main />
+        <Main boomarks={this.state.bookmarks}/>
         {this.state.isModalVisible && <AddModal changeModalVisibility={this.changeModalVisibility} />}
       </React.Fragment>
     )

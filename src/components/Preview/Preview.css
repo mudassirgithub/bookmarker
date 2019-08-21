@@ -1,0 +1,60 @@
+.preview {
+    width: 80%;
+    height: 200px;
+    margin: 5px auto 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: inset 0 0 10px #505d69;
+}
+
+.previewImage {
+    max-width: 100%;
+    height: 100px;
+    max-height: 100px;
+    padding: 5px;
+    border-bottom: 1px solid #505D69;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.previewTitle {
+    max-width: 100%;
+    max-height: 35px;
+    padding: 3px 5px;
+    font-style: normal;
+    font-weight: Bold;
+    font-size: 12px;
+    line-height: 12px;
+    color: #242121;
+}
+
+.previewDes {
+    max-width: 100%;
+    max-height: 35px;
+    font-style: normal;
+    font-weight: normal;
+    padding: 3px 5px;
+    font-size: 15px;
+    line-height: 12px;
+    color: #242121;
+}
+
+.previewLoading {
+    width: 80%;
+    max-height: 40px;
+    padding: 10px;
+    margin: 5px auto 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: inset 0 0 10px #505d69;
+    font-style: normal;
+    font-weight: Bold;
+    line-height: 12px;
+    color: #242121;
+}
