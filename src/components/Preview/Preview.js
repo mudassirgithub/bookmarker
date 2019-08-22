@@ -6,7 +6,7 @@ class Preview extends React.Component {
         return (
             <React.Fragment>
             {this.props.gotResponse
-                ? 
+                ?
                 <div className="preview">
                     <div className="previewImage">
                         <img src={this.props.other.icon} alt="url" />
@@ -16,7 +16,7 @@ class Preview extends React.Component {
                     </div>
                     <div className="previewDes">
                         {this.props.other.description}
-                    </div> 
+                    </div>
                 </div>
                 :
                 <div className="previewLoading">{this.props.responseMsg}</div>

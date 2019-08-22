@@ -12,7 +12,7 @@ class AddModal extends React.Component {
             apiResponse: '',
             previewLoading: false,
             gotResponse: false,
-            responseMsg: ''
+            responseMsg: 'Loading...'
         }
     }
 
@@ -31,15 +31,19 @@ class AddModal extends React.Component {
             responseMsg: 'Loading...'
         })
         var url = {
-            urlgot: this.state.url
+            "urlgot": this.state.url
         }
-        axios
-          .post('https://api-bookmarker.herokuapp.com/url', url)
+        axios.post('https://api-bookmarker.herokuapp.com/url', url)
             .then(res => {
-                this.setState({ apiResponse: res.data.other, gotResponse: true })
+                if (res.data.hasError !== true) {
+                    this.setState({ apiResponse: res.data.other, gotResponse: true })
+                }
+                else {
+                    this.setState({ responseMsg: res.data.errorMsg })
+                }
                 console.log(res.data.other)
             })
-            .catch(err => {this.setState({responseMsg: "oops: cant connect"})})
+            .catch(err => { this.setState({ responseMsg: "oops: cant connect to server" }) })
     }
 
     saveUrl = () => {
@@ -81,7 +85,7 @@ class AddModal extends React.Component {
                             ?
                             <button onClick={this.saveUrl} type="button" className="modalButton">Save</button>
                             :
-                            <button onClick={this.postUrl} type="button" className="modalButton">Load</button>
+                            <button type="button" onClick={this.postUrl} className="modalButton">Load</button>
                         }
                     </form>
                     {this.state.previewLoading && <Preview other={this.state.apiResponse} gotResponse={this.state.gotResponse} responseMsg={this.state.responseMsg}/>}
