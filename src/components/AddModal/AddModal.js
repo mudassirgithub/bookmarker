@@ -34,7 +34,7 @@ class AddModal extends React.Component {
             urlgot: this.state.url
         }
         axios
-          .post('http://localhost:9000/url', url)
+          .post('https://api-bookmarker.herokuapp.com/url', url)
             .then(res => {
                 this.setState({ apiResponse: res.data.other, gotResponse: true })
                 console.log(res.data.other)
